@@ -1,15 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using FreelanceCRM.Data;
+using FreelanceCRM.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using FreelanceCRM.Data;
-using FreelanceCRM.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace FreelanceCRM.Controllers
 {
+
+
     public class SalesReportsController : Controller
     {
         private readonly ApplicationDbContext _context;
