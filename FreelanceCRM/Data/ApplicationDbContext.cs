@@ -1,14 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using FreelanceCRM.Models;
+﻿using FreelanceCRM.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace FreelanceCRM.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-        }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<Lead> Leads { get; set; }
         public DbSet<Contact> Contacts { get; set; }

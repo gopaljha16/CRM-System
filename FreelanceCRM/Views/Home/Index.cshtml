@@ -1,8 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container py-4">
+    <h2 class="fw-bold mb-4">CRM Dashboard</h2>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-semibold">Total Leads</h5>
+                    <p class="display-6">@ViewBag.TotalLeads</p>
+                    <a class="btn btn-sm btn-outline-primary" asp-controller="Leads" asp-action="Index">View Leads</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-semibold">Total Contacts</h5>
+                    <p class="display-6">@ViewBag.TotalContacts</p>
+                    <a class="btn btn-sm btn-outline-success" asp-controller="Contacts" asp-action="Index">View Contacts</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-semibold">Total Sales</h5>
+                    <p class="display-6">₹ @ViewBag.TotalSales</p>
+                    <a class="btn btn-sm btn-outline-warning" asp-controller="SalesReports" asp-action="Index">View Sales</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
