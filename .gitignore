@@ -1,0 +1,16 @@
+# Ignore Visual Studio temporary files
+.vs
+.user
+.suo
+
+# Ignore build outputs
+bin
+obj
+
+# Ignore Rider  VS Code
+.idea
+.vscode
+
+# Ignore other system files
+.log
+.tmp
